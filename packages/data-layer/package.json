@@ -1,0 +1,30 @@
+{
+  "name": "@youlex/data-layer",
+  "version": "0.0.0",
+  "description": "the data access layer, setting a mongo database",
+  "keywords": [
+    "mongo"
+  ],
+  "author": "Maxime Burlat <maximeburlat@gmail.com>",
+  "homepage": "https://github.com/Carglass/youlex#readme",
+  "license": "ISC",
+  "main": "lib/data-layer.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carglass/youlex.git"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Carglass/youlex/issues"
+  }
+}

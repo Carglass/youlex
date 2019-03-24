@@ -59,3 +59,8 @@ typings/
 
 # next.js build output
 .next
+
+# lerna
+lerna-debug.log
+packages/*/lib
+.idea
