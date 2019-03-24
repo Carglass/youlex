@@ -64,3 +64,5 @@ typings/
 lerna-debug.log
 packages/*/lib
 .idea
+
+.vscode

@@ -22,9 +22,15 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "start": "lerna run tsc && node lib/data-layer.js"
   },
   "bugs": {
     "url": "https://github.com/Carglass/youlex/issues"
+  },
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "graphql": "^14.1.1",
+    "mongoose": "^5.4.19"
   }
 }
