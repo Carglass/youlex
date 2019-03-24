@@ -29,10 +29,12 @@
     "url": "https://github.com/Carglass/youlex/issues"
   },
   "dependencies": {
-    "@types/mongoose": "^5.3.23",
     "apollo-datasource": "^0.3.1",
     "apollo-server": "^2.4.8",
     "graphql": "^14.1.1",
     "mongoose": "^5.4.19"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.3.23"
   }
 }
