@@ -4,6 +4,7 @@ import { connect } from "mongoose";
 import { schema } from "./schema";
 import createStore from "./utils";
 import MongoAPI from "./datasources/mongo";
+import resolvers from "./resolvers";
 
 const store = createStore();
 
@@ -70,14 +71,14 @@ const laws = [
 
 // Resolvers define the technique for fetching the types in the
 // schema.  We'll retrieve books from the "books" array above.
-const resolvers = {
-  Query: {
-    laws: async (_, __, { dataSources }) => {
-      const laws = await dataSources.mongoAPI.getLaws();
-      return laws;
-    }
-  }
-};
+// const resolvers = {
+//   Query: {
+//     laws: async (_, __, { dataSources }) => {
+//       const laws = await dataSources.mongoAPI.getLaws();
+//       return laws;
+//     }
+//   }
+// };
 
 // In the most basic sense, the ApolloServer can be started
 // by passing type definitions (typeDefs) and the resolvers

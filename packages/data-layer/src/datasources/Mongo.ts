@@ -25,7 +25,6 @@ export default class MongoAPI extends DataSource {
    */
   async getLaws() {
     const laws = await this.store.Law.find();
-    console.log(laws);
     return laws;
   }
 }
