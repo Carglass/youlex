@@ -8,7 +8,7 @@ export const schema = gql`
     title: String
     author: String
     # author: User
-    sections: [Section]
+    # sections: [Section]
   }
 
   """

@@ -1,6 +1,19 @@
 const { ApolloServer } = require("apollo-server");
+import { connect } from "mongoose";
 
 import { schema } from "./schema";
+import createStore from "./utils";
+import MongoAPI from "./datasources/mongo";
+
+const store = createStore();
+
+const dataSources = () => ({
+  mongoAPI: new MongoAPI({ store })
+});
+
+const context = async ({ req }) => {
+  return {};
+};
 
 // This is a (sample) collection of books we'll be able to query
 // the GraphQL server for.  A more complete example might fetch
@@ -59,14 +72,26 @@ const laws = [
 // schema.  We'll retrieve books from the "books" array above.
 const resolvers = {
   Query: {
-    laws: () => laws
+    laws: async (_, __, { dataSources }) => {
+      const laws = await dataSources.mongoAPI.getLaws();
+      return laws;
+    }
   }
 };
 
 // In the most basic sense, the ApolloServer can be started
 // by passing type definitions (typeDefs) and the resolvers
 // responsible for fetching the data for those types.
-const server = new ApolloServer({ typeDefs: schema, resolvers });
+const server = new ApolloServer({
+  typeDefs: schema,
+  resolvers,
+  dataSources,
+  context
+});
+
+// Connect to the Mongo DB
+// TODO manage the asynchrony with the web server
+connect("mongodb://localhost/youlex-dev");
 
 // This `listen` method launches a web-server.  Existing apps
 // can utilize middleware options, which we'll discuss later.
