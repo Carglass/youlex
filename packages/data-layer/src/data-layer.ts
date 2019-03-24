@@ -8,7 +8,26 @@ import { schema } from "./schema";
 const laws = [
   {
     title: "French Constitution",
-    author: "French"
+    author: "French",
+    sections: [
+      {
+        title: "une section",
+        description: "du president de la republique",
+        articles: [
+          {
+            summary: "elections",
+            alineas: [
+              {
+                content: "tous les 5 ans"
+              },
+              {
+                content: "elu au suffrage universel"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     title: "American Revolution",
