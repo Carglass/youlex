@@ -1,6 +1,5 @@
 import { config } from "dotenv";
 const env = config();
-import { readFileSync } from "fs";
 
 const App = require("@octokit/app");
 const Octokit = require("@octokit/rest");
@@ -40,8 +39,8 @@ const octokit = new Octokit({
   }
 });
 
-octokit.repos.listForOrg({ org: "youlex-repos" }).then(result => {
-  console.log(result);
+octokit.repos.listForOrg({ org: "youlex-repos" }).then(({ data }) => {
+  console.log(data);
 });
 
 export function githubClient() {
