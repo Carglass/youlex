@@ -1,0 +1,24 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "My schema",
+  "additionalProperties": false,
+  "properties": {
+    "number": {
+      "type": "integer"
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "alineas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "section": {
+      "type": "string"
+    }
+  },
+  "required": ["alineas", "shortDescription"]
+}
