@@ -18,7 +18,7 @@
     "url": "git+https://github.com/Carglass/youlex.git"
   },
   "scripts": {
-    "test": "jest",
+    "test": "lerna run tsc && jest",
     "start": "lerna run tsc && node lib/github-client.js",
     "tsc": "tsc"
   },

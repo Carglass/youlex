@@ -44,5 +44,5 @@ octokit.repos.listForOrg({ org: "youlex-repos" }).then(({ data }) => {
 });
 
 export function githubClient() {
-  // code here
+  return octokit.repos.listForOrg({ org: "youlex-repos" });
 }
