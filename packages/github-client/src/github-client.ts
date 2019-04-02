@@ -39,10 +39,6 @@ const octokit = new Octokit({
   }
 });
 
-octokit.repos.listForOrg({ org: "youlex-repos" }).then(({ data }) => {
-  console.log(data);
-});
-
 export function githubClient() {
   return octokit.repos.listForOrg({ org: "youlex-repos" });
 }

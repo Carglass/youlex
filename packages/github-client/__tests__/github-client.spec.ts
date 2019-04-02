@@ -2,7 +2,11 @@
 
 const githubClient = require("..");
 
-console.log(githubClient);
+describe("Environment is correctly setup", () => {
+  test("environment is correctly setup", () => {
+    expect(process.env.APP_ID).toBe(27814);
+  });
+});
 
 describe("CRUD on the repos/laws works", () => {
   test("The repos are found correctly", async () => {

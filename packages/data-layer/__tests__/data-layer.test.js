@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const dataLayer = require('..');
+const dataLayer = require("..");
 
-describe('data-layer', () => {
-    it('needs tests');
+test("adds 1 + 2 to equal 3", () => {
+  expect(1 + 2).toBe(3);
 });
