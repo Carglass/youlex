@@ -18,7 +18,7 @@
     "url": "git+https://github.com/Carglass/youlex.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
+    "test": "jest",
     "start": "lerna run tsc && node lib/github-client.js",
     "tsc": "tsc"
   },
@@ -30,5 +30,8 @@
     "@octokit/rest": "^16.21.0",
     "dotenv": "^7.0.0",
     "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "jest": "^24.6.0"
   }
 }

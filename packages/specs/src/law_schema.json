@@ -4,37 +4,44 @@
     "title": "My schema",
     "additionalProperties": false,
     "properties": {
-        "id": {
-            "type": "integer"
-        },
-        "shortDescription": {
+        "name": {
             "type": "string"
         },
-        "alineas": {
+        "articles": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/Alinea"
+                "type": "string"
             }
         },
-        "section": {
-            "type": "integer"
+        "creator": {
+            "type": "string"
+        },
+        "sections": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Section"
+            }
         }
     },
     "required": [
-        "alineas",
-        "shortDescription"
+        "articles",
+        "name"
     ],
     "definitions": {
-        "Alinea": {
+        "Section": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "content": {
+                "id": {
+                    "type": "integer"
+                },
+                "title": {
                     "type": "string"
                 }
             },
             "required": [
-                "content"
+                "id",
+                "title"
             ]
         }
     }
