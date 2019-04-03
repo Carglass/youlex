@@ -22,7 +22,6 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "test": "jest",
     "start": "lerna run tsc && node lib/data-layer.js"
   },
   "bugs": {
