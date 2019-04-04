@@ -1,6 +1,6 @@
 "use strict";
 
-const githubClient = require("..");
+const githubClient = require("./../src/github-client");
 
 describe("Environment is correctly setup", () => {
   test("environment is correctly setup", () => {
